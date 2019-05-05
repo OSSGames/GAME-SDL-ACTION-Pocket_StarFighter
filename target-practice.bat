@@ -1,0 +1,1 @@
+pocketstar -ne 100 -p gamma

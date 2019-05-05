@@ -1,0 +1,76 @@
+.TH man 6 "04 September 2014" "Mark Burger" "Pocket Starfighter manual"
+.SH NAME
+Pocket Starfighter \- A Wireframe 3D Space Dogfight Simulator
+.SH SYNOPSIS
+pocketstar [OPTIONS]
+.SH DESCRIPTION
+Pocket Starfighter is a three dimensional wireframe space combat
+simulation game.
+.SH OPTIONS
+.IP "-vidmode w h bpp"
+Sets the screen width to 
+.B w 
+pixels, the screen height to 
+.B h 
+pixels, and the color depth to 
+.B bpp 
+bits per pixel.
+The defaults is 640 480 8.
+.P
+.IP "-p [alpha | beta | gamma | delta | epsilon | zeta ]"
+Sets the player's type of starfighter to either the alpha, beta, or gamma
+class ship.
+.P
+.IP -fs
+Enables fullscreen mode.
+.P
+.IP -bw
+Uses black-and-white rendering, disabling color.
+.P
+.IP "-ne [number]"
+Sets the number of enemy craft. If the number is greater than the maximum
+set at compile-time, the maximum number is used. Default is 3.
+.P
+.IP "-et [string]"
+Sets the types of enemies using first letter of the ship types. Using
+.B "-et a"
+would only allow alpha-class enemies. Default is 'abdgez'.
+.P
+.IP -tp
+Uses target practice mode. Enemy ships don't move or fire.
+.P
+.IP -god
+Uses 'god' mode. Enemy ships move but do not fire.
+.P
+.IP -mute
+Disables the sound.
+.P
+.IP -nopd
+By default, the damage that each ship does is divided by the number of 
+total enemy ships. This usually allows for larger fights. In this case,
+the game doesn't divide down the damage and the fighting is fair. Use
+this with caution!
+.P
+.IP -nzo
+By default, ships are rendered in order from the farthest to the nearest,
+so a small distant ship isn't displayed "on top" of a larger nearer ship.
+This argument disables this "z-ordering". Use only if you must!
+
+.SH KEYS
+.IP Movement
+.B Q, E, W, S, A, and D
+are left and right roll, downward and upward pitch, and left and right yaw,
+respectively. Different crafts have different control speeds.
+.P
+.IP Speed
+.B Z and X
+decrease and increase the speed accordingly by ten percent. Each class of
+ship has its own maximum speed, so the ten percent will vary accordingly.
+.B TAB and BACKSPACE
+set speed to maximum and minimum, respectively.
+.IP Combat
+.B SPACE
+fires the laser-weapon.
+.IP Miscellaneous
+.B F12
+takes a screenshot.
